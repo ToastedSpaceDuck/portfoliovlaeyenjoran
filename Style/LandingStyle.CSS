@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #05070D;
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+/* NAV */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-bg {
+  position: absolute;
+  inset: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(5, 7, 13, 0.95), rgba(5, 7, 13, 0));
+}
+
+.nav-links {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 32px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5, 7, 13, 1), rgba(5, 7, 13, 0));
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  padding: 0 auto;
+  margin: 120px 120px 64px;
+}
+
+.hero-inner h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 32px;
+}
+
+.hero-inner p {
+  font-size: 32px;
+  color: #B8B8B8;
+  max-width: 846px;
+  margin-bottom: 40px;
+}
+
+.hero-inner p strong {
+  color: white;
+}
+
+.hero-inner button {
+  background: transparent;
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 16px 28px;
+  border-radius: 20px;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+
+}
+
+.hero-inner button:hover {
+    background: #EDF4FA;
+    color: #0F1013;
+}
+
+/* SECTION */
+.projects {
+  background: #05070D;
+  margin: 80px 120px;
+  
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.projects-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  max-width: 1200px;
+  width: 100%;
+  /* margin: 0 auto; */
+}
+
+/* =========================
+   CARD FIX
+========================= */
+
+.project-card.new-card {
+  width: 100%;
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+
+  transition: transform 0.3s ease;
+}
+
+/* FIX 1: hover NO vertical movement */
+.project-card.new-card:hover {
+  transform: none;
+}
+
+/* TOP */
+.card-top {
+  height: 320px;
+  background: #375ECC;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+
+.card-top.alt-bg {
+  background: #E8B04C;
+  /* kies je kleur */
+}
+
+/* IMAGE */
+.card-image {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  transition: transform 0.4s ease;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+/* FIX 2: bottom background */
+.card-bottom {
+  background: #1F2228;
+  padding: 18px 20px 22px 20px;
+  border-radius: 0 0 16px 16px;
+}
+
+/* TEXT */
+.card-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #B8B8B8;
+}
+
+/* FIX 3: only image hover animatie */
+.project-card.new-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.project-inner.three {
+  display: grid;
+  grid-template-columns: repeat(3, 450px);
+  /* justify-content: center; */
+  gap: 32px;
+}
+
+.project-card.small .card-image {
+  width: 72%;
+  height: 82%;
+}
+
+.project-card.small {
+  height: 420px;
+}
+
+.project-card.small .card-top {
+  height: 220px;
+}
+
+.small-bg {
+  background: #375ECC;
+}
+
+.small-bg-2 {
+  background: #E8B04C;
+}
+
+.small-bg-3 {
+  background: #3C8721;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .projects-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-inner {
+    padding: 80px 24px 32px;
+  }
+
+  .hero-inner h1 {
+    font-size: 36px;
+  }
+
+  .hero-inner p {
+    font-size: 18px;
+  }
+
+  .projects {
+    padding: 80px 24px;
+  }
+}
+
+.footer {
+  position: relative;
+  background: #05070D;
+  margin: 120px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* fade effect zoals hero */
+.footer-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+
+  background: linear-gradient(
+    to top,
+    rgba(5, 7, 13, 1),
+    rgba(5, 7, 13, 0)
+  );
+}
+
+/* content */
+.footer-inner {
+  display: flex;
+  gap: 120px;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+/* item layout */
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+/* labels (Space Mono zoals gevraagd) */
+.footer-item .label {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: #8A8F98;
+}
+
+/* values */
+.footer-item .value {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+/* LinkedIn link styling */
+.footer-item .link:hover {
+  opacity: 0.7;
+  transition: 0.3s ease;
+}

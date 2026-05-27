@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study – Graduate Thesis</title>
+  <link rel="stylesheet" href="./Style/case-study.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-bg"></div>
+    <div class="nav-links">
+      <a href="Landingspagina.html">Home</a>
+      <a href="About.html">About me</a>
+      <a href="https://drive.google.com/file/d/1xU_CL_YOffTPiaEKIoEbSso97tZXb2Sc/view?usp=sharing">Resume</a>
+      <a href="https://www.linkedin.com/in/joran-vlaeyen-4023252b9">LinkedIn</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="cs-hero">
+    <div class="cs-hero__label">Case Study — 01</div>
+    <h1 class="cs-hero__title">Graduate thesis: From style to system —<br>Designing a UI‑kit for the Ibeauty<br>webshop
+      template</h1>
+    <div class="cs-hero__meta">
+      <span>UX Research · UI Design · Design Systems</span>
+      <span>2025 – 2026 · Graduate Thesis · Ibeauty & PXL</span>
+    </div>
+  </header>
+
+  <main class="cs-main">
+
+    <!-- 1. SUMMARY -->
+    <section class="cs-section">
+      <div class="cs-section__num">1.</div>
+      <div class="cs-section__body">
+        <h2 class="cs-section__title">Summary</h2>
+        <div class="summary-layout">
+          <p>This case study describes the development process of a unified UI kit for the Ibeauty online store. The
+            main challenge was that the existing online store varied in terms of typography, color schemes, and
+            components, which led to a disjointed user experience and inefficiencies in development. As a UX/UI
+            designer, I documented the inconsistencies, set up a modular design system, and applied it to the web-store
+            designs. Internal testing with the team confirmed that this made the interface clear and usable. The result
+            is a scalable design system with a consistent visual language.</p>
+          <div class="mockup-slot">
+            <img src="./Images/MockupWebshopDesktop.png" alt="Ibeauty UI kit mockup" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONTEXT -->
+    <section class="cs-section">
+      <div class="cs-section__num">2.</div>
+      <div class="cs-section__body">
+        <h2 class="cs-section__title">Context</h2>
+        <p>The assignment was part of a bachelor's thesis project at Ibeauty (Hasselt) in collaboration with PXL. As a
+          design intern, I was responsible for both the research and the execution of the redesign. The project lasted
+          approximately 2 to 3 months and included a UI audit of the current online store, the development of a UI kit,
+          page designs, and internal testing. The goal was to create a scalable, consistent design system to make future
+          expansions easier to implement.</p>
+      </div>
+    </section>
+
+    <!-- 3. TIMELINE -->
+    <section class="cs-section">
+      <div class="cs-section__num">3.</div>
+      <div class="cs-section__body">
+        <h2 class="cs-section__title">Timeline &amp; activities</h2>
+        <div class="timeline">
+          <div class="timeline__track">
+            <div class="timeline__phase tl--research" style="grid-column: 1 / 3;">
+              <span class="tl__label">Research</span>
+              <span class="tl__desc">UI audit current online store and compile design inconsistency catalog</span>
+            </div>
+            <div class="timeline__phase tl--design" style="grid-column: 2 / 6;">
+              <span class="tl__label">Design</span>
+              <span class="tl__desc">UI kit (foundations, components, and variants)</span>
+            </div>
+            <div class="timeline__phase tl--impl" style="grid-column: 5 / 9;">
+              <span class="tl__label">Implementation</span>
+              <span class="tl__desc">Apply the UI kit to the online store (wireframes and mock-ups)</span>
+            </div>
+            <div class="timeline__phase tl--test" style="grid-column: 8 / 11;">
+              <span class="tl__label">Testing &amp; Iteration</span>
+              <span class="tl__desc">Internal usability testing and design improvements</span>
+            </div>
+          </div>
+          <div class="timeline__weeks">
+            <span>Wk 1-2</span><span>Wk 3-4</span><span>Wk 5-6</span><span>Wk 7-8</span><span>Wk 9-10</span><span>Wk
+              11-12</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROBLEMS -->
+    <section class="cs-section">
+      <div class="cs-section__num">4.</div>
+      <div class="cs-section__body">
+        <h2 class="cs-section__title">Problems</h2>
+        <p>The Ibeauty online store exhibited visual inconsistencies: different fonts (Arial, Verdana, etc.) were used
+          interchangeably, and there was no consistent color palette or component style. This not only increased the
+          cognitive load on users but also made collaboration with developers more difficult. In e-commerce, a
+          disjointed checkout experience leads to high drop-off rates. Baymard research shows that ~70% of users abandon
+          their carts during checkout. The lack of a central design framework was therefore a major bottleneck in both
+          user experience and business operations.</p>
+      </div>
+    </section>
+
+    <!-- 4.1 OBJECTIVES -->
+    <section class="cs-section cs-section--card">
+      <div class="cs-section__num">4.1</div>
+      <div class="cs-section__body">
+        <h2 class="cs-section__title">Objectives based on problems</h2>
+        <ul class="objectives">
+          <li><strong>Visual unity:</strong> Implementing a consistent look and feel (one primary font, defined color
+            standards, etc.).</li>
+          <li><strong>Improved task completion:</strong> Users can complete tasks (e.g. checkout) faster and without
+            errors.</li>
+          <li><strong>Conversion increase:</strong> Optimizing the checkout flow should lead to more purchases.</li>
+          <li><strong>Efficiency improvement:</strong> New pages built with the UI kit can be developed faster, saving
+            time and money.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. RESEARCH -->
+    <section class="cs-section">
+      <div class="cs-section__num">5.</div>
+      <div class="cs-section__body">
+        <h2 class="cs-section__title">Research and Findings</h2>
+        <p>I began with a UI audit of the existing online store. During this process, I assessed the typography, colors,
+          and components. Key findings included:</p>
+        <div class="three-grid">
+          <div class="info-card">
+            <h3>Typography</h3>
+            <p>At least four different fonts were used. This disrupted the hierarchy and weakened the brand identity.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>Colors</h3>
+            <p>The palette was cluttered, with no clear secondary colors and missing status colors (e.g. success,
+              warning).</p>
+          </div>
+          <div class="info-card">
+            <h3>Components</h3>
+            <p>Buttons, forms, and other UI elements varied significantly from page to page. Many components needed to
+              be redesigned or modified.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.1 KEY INSIGHTS -->
+    <section class="cs-section cs-section--card">
+      <div class="cs-section__num">5.1</div>
+      <div class="cs-section__body">
+        <h2 class="cs-section__title">Key insights</h2>
+        <div class="three-grid">
+          <div class="insight-card">
+            <p>Design faster with reusable patterns: A centralized UI kit saves time — reusable elements allow new pages
+              to be created in a single design style.</p>
+          </div>
+          <div class="insight-card">
+            <p>Evolve toward a design system. By building the UI kit in a modular way (with foundations, components, and
+              variants), the project provides a basis for future expansions.</p>
+          </div>
+          <div class="insight-card">
+            <p>Consistency enhances usability. Inconsistencies in fonts, colors, and component styles hinder the user
+              learning process.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. IDEATION -->
+    <section class="cs-section">
+      <div class="cs-section__num">6.</div>
+      <div class="cs-section__body">
+        <h2 class="cs-section__title">Ideation phase and alternatives</h2>
+        <p>I considered several approaches:</p>
+        <div class="three-grid ideas">
+          <div class="idea-card">
+            <div class="idea-card__num">Idea 1:</div>
+            <h3>Ad-hoc adjustments</h3>
+            <p>Individually fix pages here and there (but not scalable).</p>
+          </div>
+          <div class="idea-card idea-card--chosen">
+            <div class="idea-card__num">Idea 2:</div>
+            <h3>Designing a UI kit</h3>
+            <p>Chosen approach: long-term consistency and saves a lot of work later on.</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-card__num">Idea 3:</div>
+            <h3>Complete redesign</h3>
+            <p>Rebuild the entire web shop from scratch (high-risk alternative).</p>
+          </div>
+        </div>
+        <p class="conclusion-note">I opted for the UI kit approach. This aligned with best practices: a UI kit offers a
+          standardized user experience and avoids "many isolated updates" across the site. At the same time, it serves
+          as the first step toward a full-fledged design system.</p>
+      </div>
+    </section>
+
+    <!-- 7. DESIGN DECISIONS -->
+    <section class="cs-section">
+      <div class="cs-section__num">7.</div>
+      <div class="cs-section__body">
+        <h2 class="cs-section__title">Design Decisions</h2>
+
+        <h3 class="sub-title">7.1 Structure of the UI kit</h3>
+        <div class="three-grid">
+          <div class="info-card">
+            <div class="info-card__icon">⬜</div>
+            <h3>Foundation (base styles)</h3>
+            <p>Atomic design elements (typography, colors, grids, spacing, etc.). These form the visual foundation for
+              the entire Ibeauty template.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">⬛</div>
+            <h3>Components</h3>
+            <p>Reusable UI elements (buttons, forms, cards, etc.) with multiple variants, states, and sizes.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">▦</div>
+            <h3>Sections</h3>
+            <p>Ready-to-use page building blocks (e.g. product overview, checkout section) that ensure consistent
+              layouts across pages.</p>
+          </div>
+        </div>
+
+        <h3 class="sub-title">7.2 Key features (before/after)</h3>
+        <div class="table-wrap">
+          <table class="comp-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Before</th>
+                <th>After redesign (with UI kit)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Font</td>
+                <td>Mix of Arial, Verdana, etc. with no hierarchy</td>
+                <td>Single font family with consistent style</td>
+              </tr>
+              <tr>
+                <td>Color scheme</td>
+                <td>Fragmented, undefined scheme</td>
+                <td>Standardized palette (pink #FF3655, grey, black)</td>
+              </tr>
+              <tr>
+                <td>Button styles</td>
+                <td>Different per page</td>
+                <td>Uniform component (same dimensions and code)</td>
+              </tr>
+              <tr>
+                <td>Iconography</td>
+                <td>Mixed and outdated</td>
+                <td>Consistent icon set</td>
+              </tr>
+              <tr>
+                <td>Page layout</td>
+                <td>Inconsistent sections and grids</td>
+                <td>Reusable layout patterns (e.g. grid for products)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-title">7.3 Checkout flow</h3>
+        <p>Each of these steps now uses standardized UI components with clear feedback. According to Baymard's research
+          guidelines, such improvements are crucial for preventing drop-offs.</p>
+      </div>
+    </section>
+
+    <!-- 8. RESULTS -->
+    <section class="cs-section cs-section--card">
+      <div class="cs-section__num">8.</div>
+      <div class="cs-section__body">
+        <h2 class="cs-section__title">Results and lessons learned</h2>
+
+        <h3 class="sub-title">8.1 Results</h3>
+        <p>By implementing the UI kit, the interface is now uniform and reliable. Consistent feedback and navigation
+          elements make the process predictable for users. Research shows that this is crucial for user trust and
+          conversion. Brand consistency has been strengthened and its maintenance has been simplified: developers can
+          quickly assemble components using clear guidelines.</p>
+        <p>Ultimately, this project marks the first step toward a design system. The core principles are documented in
+          the UI kit, meaning expansions — such as a mobile app — can be implemented quickly without visual
+          inconsistencies. The positive internal feedback demonstrates that we have achieved our goals.</p>
+
+        <h3 class="sub-title">8.2 Lessons learned</h3>
+        <ul class="lessons">
+          <li>A systematic approach works. Early and frequent testing (as recommended by Nielsen) quickly yielded
+            actionable insights.</li>
+          <li>Comprehensive documentation helps. We provided numerous wireframes, mock-ups, and test results to support
+            our design.</li>
+        </ul>
+      </div>
+    </section>
+    <!-- ── GALLERY ── -->
+    <section class="case-gallery">
+      <div class="gallery-header">
+        <span class="gallery-label">Project gallery</span>
+        <h2>Selected visuals</h2>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <img src="Images/MockupWebshopDesktop.png" alt="" data-title="Homepage redesign"
+            data-description="This redesign focused on improving visual hierarchy, creating more consistency between sections, and introducing reusable UI components for scalability.">
+        </div>
+
+        <div class="gallery-item">
+          <img src="Images/MockupWebshopMobile.png" alt="" data-title="Mobile redesign"
+            data-description="I designed responsive mobile layouts to ensure a consistent experience across devices, with a focus on optimizing the checkout flow for smaller screens.">
+        </div>
+
+        <div class="gallery-item">
+          <img src="Images/Colors.png" alt="" data-title="Color palette"
+            data-description="A cohesive color palette was established, with a primary pink (#FF3655) and complementary neutrals to create a consistent visual identity.">
+        </div>
+
+        <div class="gallery-item">
+          <img src="Images/Buttons.png" alt="" data-title="Inside the UI kit"
+            data-description="The UI kit includes standardized components such as buttons, forms, and cards, all designed with a consistent style and coded for easy reuse across the online store.">
+        </div>
+
+        <div class="gallery-item">
+          <img src="Images/Screenshot 2026-05-26 193347.png" alt="" data-title="Documentation of the UI kit"
+            data-description="I created detailed documentation for the UI kit, including guidelines for typography, color usage, and component implementation to ensure consistency in future development.">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+
+      <div class="lightbox-content">
+
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+
+        <div class="lightbox-info">
+          <span class="lightbox-small">Case study detail</span>
+          <h3 id="lightbox-title"></h3>
+          <p id="lightbox-description"></p>
+        </div>
+
+      </div>
+
+      <span class="lightbox-close">&times;</span>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-fade"></div>
+    <div class="footer-inner">
+      <div class="footer-item">
+        <span class="label">Email</span>
+        <span class="value">joran.vlaeyen301@gmail.com</span>
+      </div>
+      <div class="footer-item">
+        <span class="label">Phone</span>
+        <span class="value">+32 471 81 26 07</span>
+      </div>
+      <div class="footer-item">
+        <span class="label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/joran-vlaeyen-4023252b9" class="value link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDescription = document.getElementById('lightbox-description');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        lightbox.classList.add('active');
+
+        lightboxImg.src = item.src;
+        lightboxTitle.textContent = item.dataset.title;
+        lightboxDescription.textContent = item.dataset.description;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+
+</html>
